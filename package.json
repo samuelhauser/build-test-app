@@ -10,7 +10,8 @@
         "build:js": "webpack --progress --colors",
         "watch": "concurrently --kill-others \"npm run watch:css\" \"npm run watch:js\"",
         "watch:css": "npm run build:css -- --watch",
-        "watch:js": "npm run build:js -- --watch"
+        "watch:js": "npm run build:js -- --watch",
+        "lint": "eslint ./app/"
     },
     "author": "",
     "license": "ISC",
@@ -20,6 +21,7 @@
         "babel-loader": "^6.4.0",
         "concurrently": "^3.4.0",
         "cssnano": "^3.10.0",
+        "eslint": "^3.17.1",
         "pleeease-filters": "^3.0.1",
         "postcss-assets": "^4.1.0",
         "postcss-center": "^1.0.0",
