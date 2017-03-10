@@ -1,0 +1,17 @@
+@import "components/_variables.css";
+@import "components/button.css";
+
+.foo {
+    background-color: $color-red;
+    position: relative;
+
+    .bar {
+        top: center;
+        left: center;
+        size: 50px;
+    }
+}
+
+.icon {
+    box: horizontal middle;
+}

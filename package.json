@@ -1,0 +1,40 @@
+{
+    "name": "test-app",
+    "version": "1.0.0",
+    "description": "Testing webpack, git and travis.",
+    "scripts": {
+        "start": "npm run build:css && npm run build:js",
+        "clean": "rm -rf ./src",
+        "build": "npm run build:css && npm run build:js",
+        "build:css": "postcss ./app/style.css -o ./src/css/style.css",
+        "build:js": "webpack --progress --colors",
+        "watch": "concurrently --kill-others \"npm run watch:css\" \"npm run watch:js\"",
+        "watch:css": "npm run build:css -- --watch",
+        "watch:js": "npm run build:js -- --watch"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "autoprefixer": "^6.7.6",
+        "babel-core": "^6.23.1",
+        "babel-loader": "^6.4.0",
+        "concurrently": "^3.4.0",
+        "cssnano": "^3.10.0",
+        "pleeease-filters": "^3.0.1",
+        "postcss-assets": "^4.1.0",
+        "postcss-center": "^1.0.0",
+        "postcss-cli": "^3.0.0-beta",
+        "postcss-fixes": "^1.4.2",
+        "postcss-flexbox": "^1.0.2",
+        "postcss-quantity-queries": "^0.4.0",
+        "postcss-reporter": "^3.0.0",
+        "postcss-selector-matches": "^2.0.5",
+        "postcss-selector-not": "^2.0.0",
+        "postcss-short": "^3.0.3",
+        "postcss-simple-vars": "^3.0.0",
+        "postcss-smart-import": "^0.6.9",
+        "postcss-style-guide": "^0.13.0",
+        "precss": "^1.4.0",
+        "webpack": "^2.2.1"
+    }
+}
